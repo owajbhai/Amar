@@ -25,6 +25,7 @@ from bot import Bot
 from config import *
 from helper_func import *
 from database.database import *
+from utils import verify_user, check_token
 
 BAN_SUPPORT = f"{BAN_SUPPORT}"
 
