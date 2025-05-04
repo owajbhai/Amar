@@ -126,11 +126,35 @@ async def start_command(client: Client, message: Message):
             reply_markup = msg.reply_markup if DISABLE_CHANNEL_BUTTON else None
 
             try:
+                if not await check_verification(client, message.from_user.id) and VERIFY == True:
+                    btn = [[
+                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{BOT_USERNAME}?start="))
+                    ],[
+                    InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+                    ]]
+                    await message.reply_text(
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+                    )
+                    return
                 copied_msg = await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML, 
                                             reply_markup=reply_markup, protect_content=PROTECT_CONTENT)
                 codeflix_msgs.append(copied_msg)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
+                if not await check_verification(client, message.from_user.id) and VERIFY == True:
+                    btn = [[
+                    InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{BOT_USERNAME}?start="))
+                    ],[
+                    InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
+                    ]]
+                    await message.reply_text(
+                    text="<b>You are not verified !\nKindly verify to continue !</b>",
+                    protect_content=True,
+                    reply_markup=InlineKeyboardMarkup(btn)
+                    )
+                    return
                 copied_msg = await msg.copy(chat_id=message.from_user.id, caption=caption, parse_mode=ParseMode.HTML, 
                                             reply_markup=reply_markup, protect_content=PROTECT_CONTENT)
                 codeflix_msgs.append(copied_msg)
@@ -267,18 +291,7 @@ async def not_joined(client: Client, message: Message):
                     url=f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ])
-            if not await check_verification(client, message.from_user.id) and VERIFY == True:
-                btn = [[
-                InlineKeyboardButton("Verify", url=await get_token(client, message.from_user.id, f"https://telegram.me/{BOT_USERNAME}?start="))
-                ],[
-                InlineKeyboardButton("How To Open Link & Verify", url=VERIFY_TUTORIAL)
-                ]]
-                await message.reply_text(
-                text="<b>You are not verified !\nKindly verify to continue !</b>",
-                protect_content=True,
-                reply_markup=InlineKeyboardMarkup(btn)
-                )
-                return
+            
         except IndexError:
             pass
 
