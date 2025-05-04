@@ -44,6 +44,11 @@ SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "onylinks.com")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "e0b993ab824859c3375b05a636c32f5b61d528d2")
 TUT_VID = os.environ.get("TUT_VID","https://t.me/c/2600199074/296")
 SHORT_MSG = "<b>⌯ Here is Your Download Link, Must Watch Tutorial Before Clicking On Download...</b>"
+API = environ.get("API", "e0b993ab824859c3375b05a636c32f5b61d528d2") # shortlink api
+URL = environ.get("URL", "onylinks.com") # shortlink domain without https://
+VERIFY_TUTORIAL = environ.get("VERIFY_TUTORIAL", "https://t.me/c/2600199074/296") # how to open link 
+BOT_USERNAME = environ.get("BOT_USERNAME", "Adultjon1_bot") # bot username without @
+VERIFY = environ.get("VERIFY", "True") # set True Or False and make sure spelling is correct and first letter capital.
 
 SHORTENER_PIC = os.environ.get("SHORTENER_PIC", "https://telegra.ph/file/ec17880d61180d3312d6a.jpg")
 #--------------------------------------------
