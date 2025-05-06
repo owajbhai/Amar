@@ -39,7 +39,7 @@ async def start_command(client: Client, message: Message):
             "<b>⛔️ You are Bᴀɴɴᴇᴅ from using this bot.</b>\n\n"
             "<i>Contact support if you think this is a mistake.</i>",
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton("Contact Support", url=BAN_SUPPORT)]]
+                [[InlineKeyboardButton("Contact Support", url=https://t.me/+UwsANaNOTWMxMGY1)]]
             )
         )
     # ✅ Check Force Subscription
