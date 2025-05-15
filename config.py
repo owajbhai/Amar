@@ -33,10 +33,10 @@ DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://dbmongo702:xtb9PzLmv5dstZ
 DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "0"))  # 0 means no expiry
-FORCE_SUB_CHANNEL1 = os.getenv("FORCE_SUB_CHANNEL1", "-1002648688388")
-FORCE_SUB_CHANNEL2 = os.getenv("FORCE_SUB_CHANNEL2", "")
-FORCE_SUB_CHANNEL3 = os.getenv("FORCE_SUB_CHANNEL3", "")
-FORCE_SUB_CHANNEL4 = os.getenv("FORCE_SUB_CHANNEL4", "")
+FORCE_SUB_CHANNEL1 = os.getenv("FORCE_SUB_CHANNEL1", "@logchennal3")
+FORCE_SUB_CHANNEL2 = os.getenv("FORCE_SUB_CHANNEL2", None)
+FORCE_SUB_CHANNEL3 = os.getenv("FORCE_SUB_CHANNEL3", None)
+FORCE_SUB_CHANNEL4 = os.getenv("FORCE_SUB_CHANNEL4", None)
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/+0qElx7KJ7LE3MzY1")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "10"))
 #--------------------------------------------
