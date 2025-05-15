@@ -36,6 +36,7 @@ FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "0"))  # 0 means no expiry
 FORCE_SUB_CHANNEL1 = os.getenv("FORCE_SUB_CHANNEL1", "")
 FORCE_SUB_CHANNEL2 = os.getenv("FORCE_SUB_CHANNEL2", "")
 FORCE_SUB_CHANNEL3 = os.getenv("FORCE_SUB_CHANNEL3", "")
+FORCE_SUB_CHANNEL4 = os.getenv("FORCE_SUB_CHANNEL4", "")
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/+0qElx7KJ7LE3MzY1")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "10"))
 #--------------------------------------------
