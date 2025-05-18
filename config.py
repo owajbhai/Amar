@@ -34,7 +34,7 @@ DB_NAME = os.environ.get("DATABASE_NAME", "Cluster0")
 #--------------------------------------------
 FSUB_LINK_EXPIRY = int(os.getenv("FSUB_LINK_EXPIRY", "0"))  # 0 means no expiry
 FORCE_SUB_CHANNEL1 = os.getenv("FORCE_SUB_CHANNEL1", "@logchennal3")
-FORCE_SUB_CHANNEL2 = os.getenv("FORCE_SUB_CHANNEL2", None)
+FORCE_SUB_CHANNEL2 = os.getenv("FORCE_SUB_CHANNEL2", @backupjon5)
 FORCE_SUB_CHANNEL3 = os.getenv("FORCE_SUB_CHANNEL3", None)
 FORCE_SUB_CHANNEL4 = os.getenv("FORCE_SUB_CHANNEL4", None)
 BAN_SUPPORT = os.environ.get("BAN_SUPPORT", "https://t.me/+0qElx7KJ7LE3MzY1")
